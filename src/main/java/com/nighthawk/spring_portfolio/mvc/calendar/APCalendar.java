@@ -1,13 +1,10 @@
 package com.nighthawk.spring_portfolio.mvc.calendar;
-import java.util.*;
 
 
 // Prototype Implementation
 
 public class APCalendar {
 
-
-    Calendar c = Calendar.getInstance();
     /** Returns true if year is a leap year and false otherwise.
      * isLeapYear(2019) returns False
      * isLeapYear(2016) returns True
