@@ -19,7 +19,9 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-import org.springframework.data.mongodb.core.schema.JsonSchemaObject.Type.JsonType;
+
+import com.vladmihalcea.hibernate.type.json.JsonType;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
@@ -78,10 +80,9 @@ public class Person {
         }
     }
     */
-    /*@Type(type="json")
+    @Type(type="json")
     @Column(columnDefinition = "jsonb")
     private Map<String,Map<String, Object>> stats = new HashMap<>(); 
-     */
 
     // Constructor used when building object from an API
     public Person(String email, String password, String name, Date dob, int age, String nationality) {
