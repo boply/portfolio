@@ -173,7 +173,7 @@ public class Calculator {
                     {
                         // Resolve variable to 0 in order for the rest of the function to successfully run.
                         this.reverse_polish.add("0");
-                        this.expression = "Cannot parse expression \'" + this.expression + "\'. Unvalid";
+                        this.expression = "Cannot parse expression \'" + this.expression + "\'. Invalid";
                         break;
                     }
                     this.reverse_polish.add(token);
@@ -294,7 +294,7 @@ public class Calculator {
 
         System.out.println();
 
-        Calculator rootMath = new Calculator("4 r 2");
+        Calculator rootMath = new Calculator("27 r 3");
         System.out.println("Root Math\n" + rootMath);
         }
 }

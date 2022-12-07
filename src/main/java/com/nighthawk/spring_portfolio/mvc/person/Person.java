@@ -123,7 +123,7 @@ public class Person {
 
         // using gregorian calendar to initialize tester date object
         Date dob2 = new GregorianCalendar(2006, 2, 22).getTime();
-        Person p2 = new Person("braedencopley@gmail.com", "mrcopley", "Braeden Copley", dob2, 16, "american");
+        Person p2 = new Person("braedencopley@gmail.com", "password", "Braeden Copley", dob2, 16, "american");
         
         
         System.out.println(p1);
