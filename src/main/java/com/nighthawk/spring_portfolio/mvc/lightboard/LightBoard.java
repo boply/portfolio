@@ -117,11 +117,22 @@ public class LightBoard {
 		return outString;
     }
     
+    public void toggleLight(int row, int col) {
+        if (lights[row][col].isOn()) {
+            lights[row][col].setOn(false);
+        }
+        else {
+            lights[row][col].setOn(true);
+        }
+        System.out.println("Light (" + row + ", " + col + ") to " + lights[row][col].isOn() + "!");
+    }
+
     static public void main(String[] args) {
         // create and display LightBoard
         LightBoard lightBoard = new LightBoard(5, 5);
         System.out.println(lightBoard);  // use toString() method
         System.out.println(lightBoard.toTerminal());
         System.out.println(lightBoard.toColorPalette());
+        lightBoard.toggleLight(1,1);
     }
 }

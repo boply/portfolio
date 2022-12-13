@@ -43,6 +43,12 @@ public class Light {
 
     /* Assign random colors and effects */
     public Light() {
+        int check = (short) Math.round(Math.random());
+        if (check == 1) {
+            this.on = true;
+        } else {
+            this.on = false;
+        }
         int maxColor = 255;
         int effect = 9;
         this.red = (short) (Math.random()*(maxColor+1));
@@ -69,10 +75,36 @@ public class Light {
             "\"red\": " + red + "," +
             "\"green\": " +  green + "," + 
             "\"blue\": " + blue + "," +
+            "\"on\": " + on + "," +
             "\"effect\": " + "\"" + EFFECT.get(effect) + "\"" +
             "}" );
     }
 
+    public boolean isOn() {
+        return this.on;
+    }
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+
+    public short getRed() {
+        return red;
+    }
+
+    public short getGreen() {
+        return green;
+    }
+
+    public short getBlue() {
+        return blue;
+    }
+
+    public short getEffect() {
+        return effect;
+    }
+
+    
     static public void main(String[] args) {
         // create and display LightBoard
         Light light = new Light();
